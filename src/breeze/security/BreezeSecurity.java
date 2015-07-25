@@ -160,14 +160,14 @@ public class BreezeSecurity {
 				System.out.println("Breeze Security");
 				System.out.println("-------------------------------");
 
-				if (args.length == 0) {
+				if (args.length < 2) {
 					System.out.println("missing password ftp in parameter");
 				}
 				else {
 					boolean deamonOn = true;
 					BreezeSecurity bs;
 					try {
-						bs = new BreezeSecurity("ftp.breezeuav.com", "breezeuaca", args[0], 21);
+						bs = new BreezeSecurity("ftp.breezeuav.com", args[0], args[1], 21);
 
 						// Calibration
 						//-----------------------------------------------
